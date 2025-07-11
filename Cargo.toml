@@ -1,0 +1,21 @@
+[package]
+name = "cin"
+version = "0.1.0"
+authors = ["timothy adigun <2teezrust@gmail.com>"]
+description = "cin - a utility that simplifies command-line input in Rust, especially mimicking C++-style input"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/2teez/cin"
+documentation = "https://github.com/2teez/cin"
+keywords = ["cli", "input", "keyboard", "cin", "utilities"]
+categories = [
+    "command-line-utilities",
+    "development-tools::debugging",
+    "text-processing",
+    "value-formatting",
+    "rust-patterns",
+]
+edition = "2021"
+
+
+[dependencies]
