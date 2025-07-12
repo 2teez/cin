@@ -1,5 +1,13 @@
 #![allow(unused, dead_code)]
 
+//! cin is a library that is similar to c++ std::cin
+//! in it usage. So, c++ programmer and others will
+//! find it easiler to use.
+//! It is very verbose to read from a cli in rust as compared
+//! with several other popular programming langauge.
+//! So, cin, had abstrated away the difficult of writing a vebose
+//! code only because you want to get a value of most type from the cli.
+
 use std::io::{self, Write};
 
 pub trait InputSupport {}
