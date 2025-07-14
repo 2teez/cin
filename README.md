@@ -76,8 +76,26 @@ All the verbose boilerplate required to read and parse input is handled for you 
 
     __*pub fn cin<T: InputSupport>(msg: &str) -> T*__
 
-        cin is a generic function that takes a type T implementing the marker trait InputSupport.
+      `cin` is a generic function that takes a type T implementing the marker trait InputSupport.
 
-        It supports all standard numeric types (integers and floating points) as well as String.
+      It supports all standard numeric types (integers and floating points) as well as String.
 
-        The function displays a prompt message and reads input from standard input (stdin), parsing it into the specified type.
+      The function displays a prompt message and reads input from standard input (stdin),
+
+      parsing it into the specified type.
+
+      ```
+      println!("Enter two values: ");
+      let first = cin::<u64>("Enter first number: ");
+      let second = cin::<u64>("Enter second number: ");
+
+      let max = |a: u64, b: u64| {
+          if a > b { a } else { b }
+      };
+      let min = |a, b| {
+          if a < b { a } else { b }
+      };
+
+      println!("{} <> {}", max(first, second), min(first, second));
+
+      ```
