@@ -10,7 +10,7 @@ cin - works like cin in c++ std::cin to get "any" value from the cli.
 #### Use rust cargo
 
 
-    cargo run cin
+    cargo add cin
 
 
   #### Using from Github link:
