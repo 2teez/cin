@@ -76,7 +76,7 @@ All the verbose boilerplate required to read and parse input is handled for you 
 
     __*pub fn cin<T: InputSupport>(msg: &str) -> T*__
 
-    cin is a generic function that takes a type T implementing the marker trait InputSupport.
+        cin is a generic function that takes a type T implementing the marker trait InputSupport.
 
         It supports all standard numeric types (integers and floating points) as well as String.
 
