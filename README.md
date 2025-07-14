@@ -35,6 +35,7 @@ cin - works like cin in c++ std::cin to get "any" value from the cli.
 
 ## Example
 --
+
 In cpp, you can have the following:
 ```
 #include <iostream>
@@ -62,8 +63,20 @@ fn main() {
 
 You can specify the expected input type in two convenient ways:
 
-  1. By annotating the variable: let radius: f64 = cin("Enter radius: ");
+  1. By annotating the variable: `let radius: f64 = cin("Enter radius: ");`
 
-  2. specifying the type in the function call: let radius = cin::<f64>("Enter radius: ");
+  2. specifying the type in the function call: `let radius = cin::<f64>("Enter radius: ");`
 
 All the verbose boilerplate required to read and parse input is handled for you under the hood by the cin crate.
+
+### Cin Methods
+--
+
+1. cin
+  '__*pub fn cin<T: InputSupport>(msg: &str) -> T*__'
+
+    - cin is a generic function that takes a type T implementing the marker trait InputSupport.
+
+        It supports all standard numeric types (integers and floating points) as well as String.
+
+        The function displays a prompt message and reads input from standard input (stdin), parsing it into the specified type.
