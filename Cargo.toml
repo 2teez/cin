@@ -1,6 +1,6 @@
 [package]
 name = "cin"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["timothy adigun <2teezrust@gmail.com>"]
 description = "cin - a utility that simplifies command-line input in Rust, especially mimicking C++-style input"
 readme = "README.md"
