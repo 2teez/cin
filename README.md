@@ -1,11 +1,11 @@
 # cin
 
 ## Name
---
+
 cin - works like cin in c++ std::cin to get "any" value from the cli.
 
 ## Installation
---
+
 
 #### Use rust cargo
 
@@ -25,7 +25,7 @@ cin - works like cin in c++ std::cin to get "any" value from the cli.
 
 
  ## Description
- --
+
  cin makes it easier to receive input from the keyboard when building CLI programs in Rust.
 
  Reading values from standard input in Rust can feel verbose and unintuitive, especially for beginners. Unlike in C++ or Python, where taking input is simple and introduced early (e.g., std::cin in C++ or input() in Python), Rust requires more boilerplate and familiarity with traits like FromStr and manual read_line parsing.
@@ -34,7 +34,7 @@ cin - works like cin in c++ std::cin to get "any" value from the cli.
 
 
 ## Example
---
+
 
 In cpp, you can have the following:
 ```
@@ -70,7 +70,7 @@ You can specify the expected input type in two convenient ways:
 All the verbose boilerplate required to read and parse input is handled for you under the hood by the cin crate.
 
 ### Cin Methods
---
+
 
 1. cin
   '__*pub fn cin<T: InputSupport>(msg: &str) -> T*__'
