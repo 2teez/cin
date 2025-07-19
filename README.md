@@ -23,14 +23,19 @@ cin - works like cin in c++ std::cin to get "any" value from the cli.
 
     use cin::cin::cin;
 
+and/or use the macro version like so:
+
+    #[macro_use]
+    extern crate cin;
+
 
  ## Description
 
- cin makes it easier to receive input from the keyboard when building CLI programs in Rust.
+ cin makes it easier to get input from the keyboard when building CLI programs in Rust.
 
- Reading values from standard input in Rust can feel verbose and unintuitive, especially for beginners. Unlike in C++ or Python, where taking input is simple and introduced early (e.g., std::cin in C++ or input() in Python), Rust requires more boilerplate and familiarity with traits like FromStr and manual read_line parsing.
+ Reading values from standard input in Rust can feel verbose and unintuitive, especially for beginners. Unlike in C++ or Python, where taking input is simple and introduced early (e.g., std::cin in C++ or input() in Python), Rust requires more boilerplate and familiarity with traits like FromStr and manual read line parsing.
 
- This crate aims to simplify that process by providing a familiar, beginner-friendly function: cin::<T>(), inspired by C++'s [std::cin](https://en.cppreference.com/w/cpp/io/cin.html). With cin, you can read values of any supported type with a single line—making input handling in Rust as smooth as in other languages.
+ This crate aims to simplify that process by providing a familiar, beginner-friendly function: `cin::<T>()`, or/and `cin!()` macro inspired by C++'s [std::cin](https://en.cppreference.com/w/cpp/io/cin.html). With cin, you can read values of any supported type with a single line—making input handling in Rust as smooth as in other languages.
 
 
 ## Example
@@ -99,3 +104,24 @@ All the verbose boilerplate required to read and parse input is handled for you 
       println!("{} <> {}", max(first, second), min(first, second));
 
       ```
+
+2.  cin!
+
+      The cin! macro makes it easy to get user input in Rust, just like cin in C++. You can show a message and read input from the user without writing much code.
+
+      You can use it in different ways: cin!() shows a default prompt and reads a string, cin!(i32) reads a number, cin!("Name: ") shows a custom message, and cin!("Age: ", u8) shows a message and reads a number. It trims the input and stops with an error if the input is not valid.
+
+      ```
+      let age: u32 = cin!("Enter your age: ", u32);
+      let name = cin!("Name: ");
+      let nickname = cin!(); // "Prompt: "
+      let score: f32 = cin!(f32); // "Prompt: "
+      ```
+
+## Versioning:
+  version 0.1.0 - uses only `cin::<T>()` to receive input from the user.
+
+  version 0.1.1/0.1.2 - corrected and added examples, as shown under the cin function
+  documentation.
+
+  versio 0.2.0 - added macro `cin!()`, which covered all practical use cases: `cin!(<Literal String>, <Type>)`, `cin!(<Type>)`, `cin!(<Literal String>)`,`cin!()`
